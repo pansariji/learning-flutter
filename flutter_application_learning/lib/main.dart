@@ -8,11 +8,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-  //   return MaterialApp( // Root widget
-  //     home: Scaffold(
-  //       appBar: AppBar(
-  //         title: Center(child: const Text('My Home Page')),
-  //       ),
+    return MaterialApp( // Root widget
+      home: Scaffold(
+        // appBar: AppBar(
+        //   title: Center(child: const Text('My Home Page')),
+        // ),
   //       body: Center(
   //         child: Builder(
   //           builder: (context) {
@@ -34,14 +34,35 @@ class MyApp extends StatelessWidget {
   //     ),
   //   );
   // }
+             
 
-
-    return Center(
-          child: Row(
-            children: [const Text("hi there"),
-            ]
+    body: Column(
+      mainAxisAlignment:  MainAxisAlignment.center,
+      children: [
+        Row(
+          mainAxisAlignment:  MainAxisAlignment.spaceEvenly,
+          children: [
+            
+            const Text('Hello, World!'),
+          ],
+        ),
+        Row(
+          mainAxisAlignment:  MainAxisAlignment.spaceEvenly,
+          children: [
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: ElevatedButton(
+                onPressed: () {
+                  print("pressed");
+                },
+                child: const Text('Button'),
+              ),
           ),
-        );
-
-}
+          ]
+        ),
+      ],
+    ),
+      ),
+    );
+  }
 }
